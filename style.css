@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: cursive;
+  background: #001;
+  height: 100vh;
+}
+.container {
+  width: 400px;
+  padding: 10px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: #000;
+  margin: 100px auto 0;
+  position: relative;
+  overflow: hidden;
+}
+.winnerALert {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background:rgba(0, 0, 0, 0.584);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  top: 0;
+  left: -102%;
+  transition: 500ms;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:50px;
+}
+.winnerALert h3{
+font-size:28px;
+color: white;
+} 
+.winnerALert button{
+  border:solid 1px white;
+  color: white;
+  background-color: transparent;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+.winnerALert.active{
+  left: 0;
+}
+.box {
+  background-color: #121212;
+  height: 31%;
+  width: 31%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 80px;
+  color: white;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+.box.x {
+  text-shadow: 0 0 5px rgb(0, 89, 255), 0 0 10px rgb(0, 89, 255),
+    0 0 15px rgb(0, 89, 255), 0 0 30px rgb(0, 89, 255);
+}
+.box.o {
+  text-shadow: 0 0 5px crimson, 0 0 10px crimson, 0 0 15px crimson,
+    0 0 30px crimson;
+}
+
+.result {
+  display: flex;
+  background: #121212;
+  width: 400px;
+  margin: auto;
+  color: white;
+  justify-content: space-between;
+}
+.result div.active {
+  background: black;
+}
+.result div {
+  width: 50%;
+}
+.playerO {
+  padding: 10px;
+  color: crimson;
+}
+.playerO.active {
+  border: solid 3px crimson;
+}
+.playerX {
+  padding: 10px;
+  color: rgb(0, 89, 255);
+}
+.playerX.active {
+  border: solid 3px rgb(0, 89, 255);
+}
