@@ -2,6 +2,7 @@
 // Player O: crimson, Player X: blue rgb(0, 89, 255)
 let winsound = new Audio("audio/WIN sound effect no copyright.mp3");
 let newGameSound = new Audio("audio/Video Game Start Sound Effect.mp3");
+let clickSound = new Audio("audio/Click Sound Effect.mp3");
 let player = "x";
 let values = ["", "", "", "", "", "", "", "", ""];
 
@@ -21,6 +22,7 @@ function displayValues() {
 // Add click event listeners to each game box
 gameBoxes.forEach((box, index) => {
   box.addEventListener("click", () => {
+    clickSound.play();
     if (values[index] !== "") {
       box.style.cursor = "not-allowed";
     } else {
